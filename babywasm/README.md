@@ -38,3 +38,9 @@ Author: @fpasswd on Discord, @flyingpassword on Twitter%
     - Infoleak: leak heap address by shrinking until the backing store is allocated on the actually glibc heap. Here you can have several options to leak, but I choose to pick big alloc size to leak main_arena. Leak this way may not be consistent and you gotta account for that in your exploit.
     - Assume had info leak, now what? We need to get control over glibc heap. The disassociated backing store can be freed by trigger garbage collection. We still want the ArrayBuffer to be usable (not detached), but need the backing_store to be freed. After freed, you can put it on tcache bins to carry out tcache poison attack.
     - Poison sequence: alloc wasm memory, shink to 100 bytes, shrink again to put the previous pointer on tcache bin 0x70, use it to overwrite the next_ptr.
+
+## Unintended solution
+
+- CVE-2021-16040: https://github.com/r4j0x00/exploits/tree/master/CVE-2020-16040
+- read("flag.txt")
+- import("flag.txt)
