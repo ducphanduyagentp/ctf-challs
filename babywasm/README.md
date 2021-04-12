@@ -41,6 +41,6 @@ Author: @fpasswd on Discord, @flyingpassword on Twitter%
 
 ## Unintended solution
 
-- CVE-2021-16040: https://github.com/r4j0x00/exploits/tree/master/CVE-2020-16040
+- CVE-2020-16040: https://github.com/r4j0x00/exploits/tree/master/CVE-2020-16040
 - read("flag.txt")
 - import("flag.txt)
