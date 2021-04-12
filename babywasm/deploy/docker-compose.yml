@@ -1,0 +1,7 @@
+version: "3"
+services:
+  babywasm:
+    build: .
+    ports:
+      - 1337:1337
+    user: babywasm
